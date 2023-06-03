@@ -1,0 +1,59 @@
+{
+	"custom_id": 1,
+	"name_en": "Island East Swimming Pool",
+	"name_tc": "港島東游泳池",
+	"address_en": "52 Lei King Road, Sai Wan Ho, Hong Kong",
+	"address_tc": "香港西灣河鯉景道52號",
+	"latitude": "22.2847541",
+	"longitude": "114.2222929",
+	"opening":
+	[
+		{
+			"session":1,
+			"start":"06:30:00",
+			"end":"12:00:00"
+		},
+		{
+			"session":2,
+			"start":"13:00:00",
+			"end":"17:00:00"
+		},
+		{
+			"session":3,
+			"start":"18:00:00",
+			"end":"22:00:00"
+		}
+	],
+	"cleaning": 3,
+	"cleaning_alternative": 5,
+	"facility":
+	[
+		{
+			"name_en": "Training Pool",
+			"name_tc": "訓練池",
+			"length": 25,
+			"width": 10,
+			"depth_max": 1.2,
+			"indoor": true,
+			"heated": true
+		},
+		{
+			"name_en": "Toddlers' Pool",
+			"name_tc": "戲水池",
+			"length": 0,
+			"width": 0,
+			"depth_max": 0.15,
+			"indoor": true,
+			"heated": false
+		},
+		{
+			"name_en": "Leisure Pool",
+			"name_tc": "嬉水池",
+			"length": 0,
+			"width": 0,
+			"depth_max": 0.45,
+			"indoor": true,
+			"heated": false
+		}
+	]
+}
