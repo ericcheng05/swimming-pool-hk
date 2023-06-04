@@ -1,0 +1,119 @@
+{
+	"area":
+	[
+		{
+			"id": 1,
+			"name_en": "Hong Kong Island",
+			"name_tc": "香港島",
+			"districts":
+			[
+				{
+					"id": 1,
+					"name_en": "Eastern",
+					"name_tc": "東區"
+				},
+				{
+					"id": 2,
+					"name_en": "Wan Chai",
+					"name_tc": "灣仔區"
+				},
+				{
+					"id": 3,
+					"name_en": "Central and Western",
+					"name_tc": "中西區"
+				},
+				{
+					"id": 4,
+					"name_en": "Southern",
+					"name_tc": "南區"
+				}
+			]			
+		},
+		{
+			"id": 2,
+			"name_en": "Kowloon",
+			"name_tc": "九龍區",
+			"districts":
+			[
+				{
+					"id": 5,
+					"name_en": "Yau Tsim Mong",
+					"name_tc": "油尖旺區"
+				},
+				{
+					"id": 6,
+					"name_en": "Sham Shui Po",
+					"name_tc": "深水埗區"
+				},
+				{
+					"id": 7,
+					"name_en": "Kowloon City",
+					"name_tc": "九龍城區"
+				},
+				{
+					"id": 8,
+					"name_en": "Wong Tai Sin",
+					"name_tc": "黃大仙區"
+				},
+				{
+					"id": 9,
+					"name_en": "Kwun Tong",
+					"name_tc": "觀塘區"
+				}
+			]			
+		},
+		{
+			"id": 3,
+			"name_en": "New Territories",
+			"name_tc": "新界區",
+			"districts":
+			[
+				{
+					"id": 10,
+					"name_en": "Sha Tin",
+					"name_tc": "沙田區"
+				},
+				{
+					"id": 11,
+					"name_en": "Sai Kung",
+					"name_tc": "西貢區"
+				},
+				{
+					"id": 12,
+					"name_en": "Tuen Mun",
+					"name_tc": "屯門區"
+				},
+				{
+					"id": 13,
+					"name_en": "Kwai Tsing",
+					"name_tc": "葵青區"
+				},
+				{
+					"id": 14,
+					"name_en": "Yuen Long",
+					"name_tc": "元朗區"
+				},
+				{
+					"id": 15,
+					"name_en": "North",
+					"name_tc": "北區"
+				},
+				{
+					"id": 16,
+					"name_en": "Tai Po",
+					"name_tc": "大埔區"
+				},
+				{
+					"id": 17,
+					"name_en": "Tsuen Wan",
+					"name_tc": "荃灣區"
+				},
+				{
+					"id": 18,
+					"name_en": "Islands",
+					"name_tc": "離島區"
+				}
+			]			
+		}
+	]
+}
