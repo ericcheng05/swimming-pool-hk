@@ -1,0 +1,166 @@
+<html>
+	<head>
+		<title>Swimming Pool Opening Status</title>
+		<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+		<script type="text/javascript">
+			function display_c()
+			{
+				var refresh=1000; // Refresh rate in milli seconds
+				mytime=setTimeout('display_ct()',refresh)
+			}
+			function display_ct()
+			{
+				var x = new Date()
+				document.getElementById('ct').innerHTML = x;
+				display_c();
+			}
+		</script>
+	</head>
+
+
+	<body onload=display_ct();>
+		<h1>香港泳池開放狀況</h1>
+		<h3>現在時間: <span id='ct' ></span></h3>
+		</br>
+		
+		<table id='table'>
+			<!-- HEADING FORMATION -->
+			<tr>
+				<th>District</th>
+                <th>District TC</th>
+            </tr>
+		
+		
+			<script>
+				$(document).ready(function ()
+				{
+					// FETCHING DATA FROM JSON FILE
+					$.getJSON("data/district.json", function (data)
+					{
+						var district = '';
+						
+						// ITERATING THROUGH OBJECTS
+						$.each(data, function (key, value) 
+						{
+							//CONSTRUCTION OF ROWS HAVING
+							// DATA FROM JSON OBJECT
+							district += '<tr>';
+							district += '<td>' + value.name_en + '</td>';
+							district += '<td>' + value.name_tc + '</td>';						
+							district += '</tr>';
+						});
+							  
+						//INSERTING ROWS INTO TABLE 
+						$('#table').append(district);
+					});
+				});
+            </script>
+		</table>
+		
+		
+		
+		
+		
+		
+		<h2>港島區</h2>
+		<table>
+			<tr>
+				<th>泳池</th>
+				<th>狀況</th>
+				<th>設施狀況</th>
+			</tr>
+			<tr>
+				<td>港島東游泳池</td>
+				<td>開放中</td>
+				<td>
+					<table>
+						<tr>
+							<th>訓練池</th>
+							<th>戲水池</th>
+							<th>嬉水池</th>
+						</tr>
+						<tr>
+							<td>開放中</td>
+							<td>開放中</td>
+							<td>開放中</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+			<tr>
+				<td>柴灣游泳池</td>
+				<td>開放中</td>
+				<td>
+					<table>
+						<tr>
+							<th>主池</th>
+							<th>副池</th>
+							<th>訓練池</th>
+							<th>習泳池 1</th>
+							<th>習泳池 2</th>
+							<th>跳水池</th>
+							<th>嬉水池 1</th>
+							<th>嬉水池 2</th>
+							<th>嬉水池 3</th>							
+						</tr>
+						<tr>
+							<td>開放中</td>
+							<td>開放中</td>
+							<td>開放中</td>
+							<td>開放中</td>
+							<td>開放中</td>
+							<td>開放中</td>
+							<td>開放中</td>
+							<td>開放中</td>
+							<td>開放中</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+	</body>
+</html>
+
+港島東游泳池
+柴灣游泳池
+小西灣游泳池
+灣仔游泳池
+摩理臣山游泳池
+維多利亞公園游泳池
+堅尼地城游泳池
+中山紀念公園游泳池
+包玉剛游泳池
+九龍公園游泳池
+大角咀游泳池
+荔枝角公園游泳池
+深水埗公園游泳池
+李鄭屋游泳池
+大環山游泳池
+何文田游泳池
+九龍仔游泳池
+摩士公園游泳池
+斧山道游泳池
+佐敦谷游泳池
+觀塘游泳池
+藍田游泳池
+粉嶺游泳池
+上水游泳池
+大埔游泳池
+沙田賽馬會游泳池
+顯田游泳池
+馬鞍山游泳池
+將軍澳游泳池
+西貢游泳池
+荃景圍胡忠游泳池
+城門谷游泳池
+葵盛游泳池
+北葵涌賽馬會游泳池
+青衣游泳池
+青衣西南游泳池
+屯門游泳池
+賽馬會仁愛堂游泳池
+屯門西北游泳池
+元朗游泳池
+天水圍游泳池
+屏山天水圍游泳池
+
