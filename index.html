@@ -1,7 +1,7 @@
 <html>
 	<head>
 		<title>Swimming Pool Opening Status</title>
-		<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 		<script type="text/javascript">
 			function display_c()
 			{
@@ -17,45 +17,44 @@
 		</script>
 	</head>
 
-
 	<body onload=display_ct();>
 		<h1>香港泳池開放狀況</h1>
-		<h3>現在時間: <span id='ct' ></span></h3>
+		<h3>現在時間: <span id='ct'></span></h3>
 		</br>
-		
-		<table id='table'>
-			<!-- HEADING FORMATION -->
-			<tr>
-				<th>District</th>
-                <th>District TC</th>
+<table id="content">
+        <thead>
+            <tr>
+				<th>Area</th>
+                <th>Distirct</th>
+                <th>Pool Name</th>
+                <th>Pool Status</th>
             </tr>
-		
-		
-			<script>
-				$(document).ready(function ()
-				{
-					// FETCHING DATA FROM JSON FILE
-					$.getJSON("data/district.json", function (data)
-					{
-						var district = '';
-						
-						// ITERATING THROUGH OBJECTS
-						$.each(data, function (key, value) 
-						{
-							//CONSTRUCTION OF ROWS HAVING
-							// DATA FROM JSON OBJECT
-							district += '<tr>';
-							district += '<td>' + value.name_en + '</td>';
-							district += '<td>' + value.name_tc + '</td>';						
-							district += '</tr>';
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <script>
+        $(document).ready(function() {
+            $.getJSON("https://pool.hlcheng.cf/data/district.json", function(data) {
+                var tableBody = $("#content tbody");
+                $.each(data, function(rootName, root) {
+					$.each(root, function(areaName, area) {					
+							var row = $("<tr></tr>");							
+							row.append($("<td colspan='4'></td>").text(area.name_en));							
+							tableBody.append(row);
+						$.each(area.districts, function(index, district) {
+							var row = $("<tr></tr>");
+							row.append($("<td></td>").text(""));							
+							row.append($("<td colspan='3'></td>").text(district.name_en));							
+							tableBody.append(row);
 						});
-							  
-						//INSERTING ROWS INTO TABLE 
-						$('#table').append(district);
 					});
 				});
-            </script>
-		</table>
+            }).fail(function() {
+                console.log("Failed to retrieve JSON data.");
+            });
+        });
+    </script>
 		
 		
 		
