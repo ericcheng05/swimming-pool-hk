@@ -1,5 +1,4 @@
-# swimming-pool-hk
-Status of Hong Kong Swimming Pool
+# Hong Kong Swimming Pool Status
 
 ## Purpose
 Single Dashboard showing Current Pool Opening Status  
