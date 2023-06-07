@@ -15,6 +15,15 @@
 				display_c();
 			}
 		</script>
+		<script>
+		export async function onRequest(context)
+		{
+			// Create a prepared statement with our query
+			const ps = context.env.POOLS_DB.prepare('SELECT * from poolsusers');
+			const data = await ps.first();
+			return Response.json(data);
+		}
+		</script>
 	</head>
 
 	<body onload=display_ct();>
@@ -34,19 +43,11 @@
 			</thead>
 			<tbody></tbody>
 		</table>
-	<script>
-		export async function onRequest(context)
-		{
-			// Create a prepared statement with our query
-			const ps = context.env.POOLS_DB.prepare('SELECT * from poolsusers');
-			const data = await ps.first();
-			return Response.json(data);
-		}
-	</script>
+	
 	
     <script>
         $(document).ready(function() {
-            $.getJSON("https://pool.hlcheng.cf/data/district.json", function(data) {
+            $.getJSON(onRequest(), function(data) {
                 var tableBody = $("#content tbody");
                 $.each(data, function(rootName, root) {
 					$.each(root, function(areaName, area) {					
